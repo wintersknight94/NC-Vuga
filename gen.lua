@@ -12,25 +12,14 @@ minetest.register_node(modname.. ":geode_core", {
 })
 ------------------------------------------------------------------------
 minetest.register_ore({
-	ore_type       = "scatter",
-	ore            = modname.. ":geode_core",
-	wherein        = "group:stone",
-	clust_scarcity = 128 * 96 * 128,
-	clust_num_ores = 1,
-	clust_size     = 1,
-	y_max          = -80,
-	y_min          = -31000,
-})
-------------------------------------------------------------------------
-minetest.register_ore({
-	ore_type       = "scatter",
-	ore            = modname.. ":geode_core",
-	wherein        = "air",
-	clust_scarcity = 128 * 96 * 128,
-	clust_num_ores = 1,
-	clust_size     = 1,
-	y_max          = -80,
-	y_min          = -31000,
+	ore_type		= "scatter",
+	ore				= modname.. ":geode_core",
+	wherein			= {"air", "group:stone", "group:sand", "group:gravel", "group:water", "group:lava"},
+	clust_scarcity	= 80 * 64 * 80,
+	clust_num_ores	= 1,
+	clust_size		= 1,
+	y_max			= -128,
+	y_min			= -31000,
 })
 ------------------------------------------------------------------------
 minetest.register_abm({
